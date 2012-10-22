@@ -37,5 +37,5 @@ Solution:
 3. return the JSON array of images (image link, line number)
 4. notify user about number of images, display progress bar
 5. foreach image from JSON  call converter
-6 read the file from DB? 
+6. read the file from DB? 
 

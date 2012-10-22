@@ -66,7 +66,7 @@ unset($urlparse);
 
 
 // ok we gotta the good file
-die('ok we gotta the good file');
+//die('ok we gotta the good file');
 
 // thanks inhan
 // http://stackoverflow.com/questions/9893078/regex-finding-urls-in-background-image-css-having-trouble#answer-9893437
