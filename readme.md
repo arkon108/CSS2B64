@@ -1,55 +1,41 @@
-# [HTML5 Boilerplate](http://html5boilerplate.com)
+# [CSS2Base64](http://lab.evervolving.com/CSS-convert-backgrounds-to-base64/)
 
-HTML5 Boilerplate is a professional front-end template that helps you build fast, robust, adaptable, and future-proof websites. Spend more time developing and less time reinventing the wheel.
+## Version alpha - dragons ahead!
 
-This project is the product of many years of iterative development and combined community knowledge. It does not impose a specific development philosophy or framework, so you're free to architect your code in the way that you want.
+Simple web tool (under development) to convert CSS background images to base64 embedded.
 
+The problem: 
+* web pages with CSS background images don't include the backgrounds when downloaded to local computer
+* viewing downloaded web pages offline won't display the background images
+* printing the web page doesn't include CSS background images
 
-## Quick start
+Solution:
+* use this tool to generate a CSS file from your own
+* submit your stylesheet which includes background images
+* receive rewritten CSS file with images converted to base64
 
-Clone the git repo - `git clone git://github.com/h5bp/html5-boilerplate.git` - or [download it](https://github.com/h5bp/html5-boilerplate/zipball/master)
+## Roadmap
 
+* DONE: check token to make sure the form originated on own server
+* DONE: check if link to CSS file exists
+* DONE: check is link really a CSS file
+* DONE: improve detecting of relative urls to bg images
+* DONE: fix the replacement loop (http only check now)
+* DONE: improve preg match
+* add error messages
+* check if image is real, test for broken images, non-image files
+* catch errors and warnings (make simple notification/logging)
+* add share links
+* add google analytics
+* allow for text input aside from entering the link to CSS file
+* force file download
+* allow for exceptions (images to skip)
+* make JS & non-JS version
+* ajaxify the form, make the progress bar, count the images, process one by one, spit out the file
+1. submit the form, perform checks, collect images
+2. store the original file in DB
+3. return the JSON array of images (image link, line number)
+4. notify user about number of images, display progress bar
+5. foreach image from JSON  call converter
+6 read the file from DB? 
 
-## Features
-
-* HTML5 ready. Use the new elements with confidence.
-* Cross-browser compatible (Chrome, Opera, Safari, Firefox 3.6+, IE6+).
-* Designed with progressive enhancement in mind.
-* CSS normalizations and common bug fixes.
-* IE-specific classes for easier cross-browser control.
-* A default print stylesheet, performance optimized.
-* Mobile browser optimizations.
-* Protection against any stray `console.log` causing JavaScript errors in IE6/7.
-* The latest jQuery via CDN, with a local fallback.
-* A custom Modernizr build for feature detection.
-* An optimized Google Analytics snippet.
-* Apache server caching, compression, and other configuration defaults for Grade-A performance.
-* Cross-domain Ajax and Flash.
-* "Delete-key friendly." Easy to strip out parts you don't need.
-* Extensive inline and accompanying documentation.
-
-
-## Contributing
-
-Anyone and everyone is welcome to [contribute](https://github.com/h5bp/html5-boilerplate/wiki/contribute). Hundreds of developers have helped make the HTML5 Boilerplate what it is today.
-
-
-## Project information
-
-* Source: http://github.com/h5bp/html5-boilerplate
-* Web: http://html5boilerplate.com
-* Docs: http://html5boilerplate.com/docs
-* Twitter: http://twitter.com/h5bp
-
-
-## License
-
-### Major components:
-
-* jQuery: MIT/GPL license
-* Modernizr: MIT/BSD license
-* Normalize.css: Public Domain
-
-### Everything else:
-
-The Unlicense (aka: public domain)
